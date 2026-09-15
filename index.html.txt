@@ -1,0 +1,2395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- =====================================================
+         BASIC WEBSITE INFORMATION
+         ===================================================== -->
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- EDIT THIS: Website title -->
+    <title>[MY NAME] | Marketing Portfolio</title>
+
+    <!-- EDIT THIS: Short description shown by search engines -->
+    <meta name="description"
+          content="Marketing portfolio of [MY NAME], a BBA student at IBA Karachi interested in digital marketing, advertising, content and creative strategy.">
+
+    <!-- Browser theme color -->
+    <meta name="theme-color" content="#f4f1eb">
+
+    <!-- =====================================================
+         FONTS
+         Free Google Fonts
+         ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display:ital@0;1&display=swap"
+          rel="stylesheet">
+
+
+    <!-- =====================================================
+         FAVICON
+         Small icon shown in browser tab
+         ===================================================== -->
+
+    <link rel="icon"
+          href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%238b3a3a'/%3E%3Ctext x='50' y='68' font-size='58' text-anchor='middle' fill='white' font-family='Arial'%3EM%3C/text%3E%3C/svg%3E">
+
+
+    <!-- =====================================================
+         ALL WEBSITE DESIGN
+         ===================================================== -->
+
+    <style>
+
+        /* ==================================================
+           1. BASIC SETTINGS
+           ================================================== */
+
+        :root {
+            --background: #f4f1eb;
+            --background-light: #faf8f4;
+            --text: #171717;
+            --muted: #6f6b66;
+            --border: #d8d3cb;
+            --accent: #8b3a3a;
+            --accent-dark: #682727;
+            --white: #ffffff;
+
+            --max-width: 1180px;
+        }
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: "DM Sans", sans-serif;
+            background: var(--background);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+
+        button {
+            font-family: inherit;
+        }
+
+
+        .container {
+            width: min(92%, var(--max-width));
+            margin: 0 auto;
+        }
+
+
+        /* ==================================================
+           2. NAVIGATION
+           ================================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+
+            background: rgba(244, 241, 235, 0.92);
+            backdrop-filter: blur(12px);
+
+            border-bottom: 1px solid rgba(216, 211, 203, 0.7);
+        }
+
+
+        .nav {
+            height: 76px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .logo {
+            font-size: 1.05rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+        }
+
+
+        .logo span {
+            color: var(--accent);
+        }
+
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            list-style: none;
+        }
+
+
+        .nav-links a {
+            font-size: 0.84rem;
+            font-weight: 600;
+            color: var(--muted);
+
+            transition: color 0.25s ease;
+        }
+
+
+        .nav-links a:hover {
+            color: var(--text);
+        }
+
+
+        .nav-resume {
+            border: 1px solid var(--text);
+            padding: 9px 15px;
+            border-radius: 100px;
+        }
+
+
+        .nav-resume:hover {
+            background: var(--text);
+            color: white !important;
+        }
+
+
+        /* Mobile menu button */
+
+        .menu-button {
+            display: none;
+
+            background: none;
+            border: none;
+
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+
+        /* ==================================================
+           3. HERO
+           ================================================== */
+
+        .hero {
+            min-height: 100vh;
+
+            padding-top: 150px;
+            padding-bottom: 100px;
+
+            display: flex;
+            align-items: center;
+        }
+
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 1.35fr 0.65fr;
+            gap: 70px;
+            align-items: end;
+        }
+
+
+        .eyebrow {
+            text-transform: uppercase;
+            letter-spacing: 0.16em;
+
+            font-size: 0.72rem;
+            font-weight: 700;
+
+            color: var(--accent);
+
+            margin-bottom: 25px;
+        }
+
+
+        .hero h1 {
+            font-size: clamp(4rem, 9vw, 8.5rem);
+            line-height: 0.9;
+
+            letter-spacing: -0.075em;
+
+            max-width: 850px;
+        }
+
+
+        .hero h1 em {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+            letter-spacing: -0.04em;
+        }
+
+
+        .hero-description {
+            max-width: 450px;
+
+            color: var(--muted);
+
+            font-size: 1.05rem;
+
+            margin-top: 40px;
+        }
+
+
+        .hero-actions {
+            display: flex;
+            gap: 12px;
+
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+
+        .button {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 13px 20px;
+
+            border: 1px solid var(--text);
+            border-radius: 100px;
+
+            font-size: 0.86rem;
+            font-weight: 600;
+
+            transition:
+                transform 0.25s ease,
+                background 0.25s ease,
+                color 0.25s ease;
+        }
+
+
+        .button:hover {
+            transform: translateY(-3px);
+        }
+
+
+        .button-dark {
+            background: var(--text);
+            color: white;
+        }
+
+
+        .button-dark:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+
+        .hero-side {
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+
+
+        .hero-side-number {
+            font-family: "DM Serif Display", serif;
+            font-size: 4rem;
+            line-height: 1;
+        }
+
+
+        .hero-side-text {
+            color: var(--muted);
+            font-size: 0.85rem;
+            margin-top: 12px;
+            max-width: 230px;
+        }
+
+
+        .scroll-note {
+            margin-top: 60px;
+
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            color: var(--muted);
+            font-size: 0.75rem;
+        }
+
+
+        .scroll-line {
+            width: 35px;
+            height: 1px;
+            background: var(--muted);
+        }
+
+
+        /* ==================================================
+           4. GENERAL SECTIONS
+           ================================================== */
+
+        section {
+            padding: 120px 0;
+        }
+
+
+        .section-header {
+            display: grid;
+            grid-template-columns: 0.25fr 1fr;
+
+            gap: 30px;
+
+            margin-bottom: 70px;
+        }
+
+
+        .section-number {
+            color: var(--accent);
+
+            font-size: 0.75rem;
+            font-weight: 700;
+
+            letter-spacing: 0.12em;
+        }
+
+
+        .section-title {
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            line-height: 0.95;
+
+            letter-spacing: -0.06em;
+        }
+
+
+        .section-title em {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+        }
+
+
+        .section-intro {
+            color: var(--muted);
+            max-width: 600px;
+            margin-top: 25px;
+            font-size: 1rem;
+        }
+
+
+        /* ==================================================
+           5. ABOUT
+           ================================================== */
+
+        .about {
+            background: var(--background-light);
+        }
+
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: start;
+        }
+
+
+        .about-large {
+            font-size: clamp(1.8rem, 3vw, 3rem);
+            line-height: 1.15;
+            letter-spacing: -0.04em;
+        }
+
+
+        .about-large span {
+            color: var(--accent);
+        }
+
+
+        .about-details {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .about-item {
+            padding: 22px 15px 22px 0;
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .about-item:nth-child(odd) {
+            border-right: 1px solid var(--border);
+        }
+
+
+        .about-item:nth-child(even) {
+            padding-left: 20px;
+        }
+
+
+        .about-item small {
+            display: block;
+
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+
+            font-size: 0.68rem;
+            font-weight: 700;
+
+            color: var(--muted);
+
+            margin-bottom: 7px;
+        }
+
+
+        .about-item strong {
+            font-size: 0.95rem;
+        }
+
+
+        .personal-note {
+            margin-top: 45px;
+
+            border-left: 2px solid var(--accent);
+
+            padding-left: 20px;
+
+            color: var(--muted);
+        }
+
+
+        /* ==================================================
+           6. EXPERIENCE
+           ================================================== */
+
+        .experience-list {
+            border-top: 1px solid var(--border);
+        }
+
+
+        .experience-item {
+            display: grid;
+
+            grid-template-columns: 0.2fr 0.45fr 1fr;
+
+            gap: 40px;
+
+            padding: 35px 0;
+
+            border-bottom: 1px solid var(--border);
+        }
+
+
+        .experience-date {
+            color: var(--muted);
+            font-size: 0.8rem;
+        }
+
+
+        .experience-company {
+            font-weight: 700;
+        }
+
+
+        .experience-role {
+            color: var(--accent);
+            font-size: 0.82rem;
+            margin-top: 4px;
+        }
+
+
+        .experience-description {
+            color: var(--muted);
+            max-width: 600px;
+            font-size: 0.92rem;
+        }
+
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+
+            margin-top: 18px;
+        }
+
+
+        .tag {
+            border: 1px solid var(--border);
+
+            padding: 5px 9px;
+
+            border-radius: 100px;
+
+            font-size: 0.68rem;
+            color: var(--muted);
+        }
+
+
+        /* ==================================================
+           7. PROJECTS
+           ================================================== */
+
+        .projects {
+            background: var(--background-light);
+        }
+
+
+        .projects-grid {
+            display: grid;
+
+            grid-template-columns: repeat(2, 1fr);
+
+            gap: 24px;
+        }
+
+
+        .project-card {
+            border: 1px solid var(--border);
+
+            background: var(--background);
+
+            padding: 30px;
+
+            min-height: 390px;
+
+            display: flex;
+            flex-direction: column;
+
+            justify-content: space-between;
+
+            position: relative;
+            overflow: hidden;
+
+            transition:
+                transform 0.3s ease,
+                border-color 0.3s ease;
+        }
+
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent);
+        }
+
+
+        .project-card:nth-child(3) {
+            grid-column: span 2;
+            min-height: 330px;
+        }
+
+
+        .project-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: start;
+        }
+
+
+        .project-number {
+            font-family: "DM Serif Display", serif;
+            font-size: 2rem;
+        }
+
+
+        .project-type {
+            font-size: 0.68rem;
+
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+
+            color: var(--accent);
+            font-weight: 700;
+        }
+
+
+        .project-title {
+            font-size: clamp(1.8rem, 4vw, 3.3rem);
+
+            line-height: 0.98;
+
+            letter-spacing: -0.05em;
+
+            margin-top: 60px;
+        }
+
+
+        .project-description {
+            max-width: 550px;
+
+            color: var(--muted);
+
+            margin-top: 18px;
+
+            font-size: 0.9rem;
+        }
+
+
+        .project-bottom {
+            display: flex;
+            align-items: end;
+            justify-content: space-between;
+
+            margin-top: 40px;
+        }
+
+
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+        }
+
+
+        .project-arrow {
+            width: 42px;
+            height: 42px;
+
+            border: 1px solid var(--text);
+            border-radius: 50%;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
+        }
+
+
+        .project-card:hover .project-arrow {
+            background: var(--text);
+            color: white;
+        }
+
+
+        /* ==================================================
+           8. TOOLS
+           ================================================== */
+
+        .tools-grid {
+            display: grid;
+
+            grid-template-columns: repeat(4, 1fr);
+
+            border-top: 1px solid var(--border);
+            border-left: 1px solid var(--border);
+        }
+
+
+        .tool {
+            min-height: 180px;
+
+            padding: 25px;
+
+            border-right: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
+        }
+
+
+        .tool:hover {
+            background: var(--text);
+            color: white;
+        }
+
+
+        .tool-icon {
+            font-size: 1.6rem;
+        }
+
+
+        .tool-name {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+
+        .tool-description {
+            color: var(--muted);
+            font-size: 0.72rem;
+            margin-top: 5px;
+        }
+
+
+        .tool:hover .tool-description {
+            color: #d7d7d7;
+        }
+
+
+        /* ==================================================
+           9. RESUME
+           ================================================== */
+
+        .resume {
+            background: var(--text);
+            color: white;
+        }
+
+
+        .resume-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+
+            align-items: end;
+        }
+
+
+        .resume .section-number {
+            color: #d9a2a2;
+        }
+
+
+        .resume-title {
+            font-size: clamp(3rem, 7vw, 7rem);
+
+            line-height: 0.9;
+
+            letter-spacing: -0.07em;
+        }
+
+
+        .resume-title em {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+        }
+
+
+        .resume-text {
+            color: #bdbdbd;
+            max-width: 450px;
+            margin-top: 25px;
+        }
+
+
+        .resume-button {
+            display: inline-flex;
+
+            margin-top: 35px;
+
+            padding: 15px 22px;
+
+            border: 1px solid white;
+            border-radius: 100px;
+
+            font-size: 0.85rem;
+            font-weight: 700;
+
+            transition:
+                background 0.25s ease,
+                color 0.25s ease;
+        }
+
+
+        .resume-button:hover {
+            background: white;
+            color: var(--text);
+        }
+
+
+        /* ==================================================
+           10. CONTACT
+           ================================================== */
+
+        .contact {
+            background: var(--background-light);
+        }
+
+
+        .contact-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 80px;
+        }
+
+
+        .contact-heading {
+            font-size: clamp(3rem, 7vw, 7rem);
+
+            line-height: 0.9;
+
+            letter-spacing: -0.07em;
+        }
+
+
+        .contact-heading em {
+            font-family: "DM Serif Display", serif;
+            font-weight: 400;
+        }
+
+
+        .contact-links {
+            border-top: 1px solid var(--border);
+        }
+
+
+        .contact-link {
+            display: flex;
+
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 22px 0;
+
+            border-bottom: 1px solid var(--border);
+
+            font-size: 1rem;
+
+            transition: color 0.25s ease;
+        }
+
+
+        .contact-link:hover {
+            color: var(--accent);
+        }
+
+
+        .contact-label {
+            color: var(--muted);
+            font-size: 0.7rem;
+
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+
+        /* ==================================================
+           11. FOOTER
+           ================================================== */
+
+        footer {
+            padding: 25px 0;
+
+            background: var(--background-light);
+
+            border-top: 1px solid var(--border);
+        }
+
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+
+            color: var(--muted);
+
+            font-size: 0.72rem;
+        }
+
+
+        /* ==================================================
+           12. SCROLL ANIMATIONS
+           ================================================== */
+
+        .reveal {
+            opacity: 0;
+
+            transform: translateY(25px);
+
+            transition:
+                opacity 0.8s ease,
+                transform 0.8s ease;
+        }
+
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        /* ==================================================
+           13. MOBILE RESPONSIVE DESIGN
+           ================================================== */
+
+        @media (max-width: 800px) {
+
+            .nav {
+                height: 68px;
+            }
+
+
+            .menu-button {
+                display: block;
+            }
+
+
+            .nav-links {
+                position: absolute;
+
+                top: 68px;
+                left: 0;
+
+                width: 100%;
+
+                background: var(--background);
+
+                border-bottom: 1px solid var(--border);
+
+                padding: 20px;
+
+                display: none;
+
+                flex-direction: column;
+
+                align-items: stretch;
+
+                gap: 0;
+            }
+
+
+            .nav-links.active {
+                display: flex;
+            }
+
+
+            .nav-links li {
+                border-bottom: 1px solid var(--border);
+            }
+
+
+            .nav-links a {
+                display: block;
+                padding: 15px 0;
+            }
+
+
+            .nav-resume {
+                border: none;
+                padding: 15px 0;
+            }
+
+
+            .hero {
+                padding-top: 125px;
+            }
+
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 55px;
+            }
+
+
+            .hero h1 {
+                font-size: clamp(3.5rem, 17vw, 6rem);
+            }
+
+
+            .hero-side {
+                max-width: 300px;
+            }
+
+
+            section {
+                padding: 85px 0;
+            }
+
+
+            .section-header {
+                grid-template-columns: 1fr;
+                gap: 15px;
+                margin-bottom: 50px;
+            }
+
+
+            .about-grid,
+            .resume-grid,
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 50px;
+            }
+
+
+            .about-details {
+                grid-template-columns: 1fr;
+            }
+
+
+            .about-item:nth-child(odd) {
+                border-right: none;
+            }
+
+
+            .about-item:nth-child(even) {
+                padding-left: 0;
+            }
+
+
+            .experience-item {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                padding: 28px 0;
+            }
+
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .project-card,
+            .project-card:nth-child(3) {
+                grid-column: auto;
+                min-height: 360px;
+            }
+
+
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+
+            .tool {
+                min-height: 150px;
+            }
+
+
+            .footer-inner {
+                flex-direction: column;
+            }
+        }
+
+
+        @media (max-width: 450px) {
+
+            .container {
+                width: 89%;
+            }
+
+
+            .hero h1 {
+                font-size: 3.7rem;
+            }
+
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+
+            .button {
+                width: 100%;
+            }
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         NAVIGATION
+         ===================================================== -->
+
+    <header>
+
+        <div class="container nav">
+
+            <!-- EDIT THIS: Your name or initials -->
+            <a href="#home" class="logo">[MY NAME]<span>.</span></a>
+
+
+            <button
+                class="menu-button"
+                id="menuButton"
+                aria-label="Open navigation menu"
+                aria-expanded="false">
+
+                ☰
+
+            </button>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+
+                <li>
+                    <a href="#about">About</a>
+                </li>
+
+                <li>
+                    <a href="#experience">Experience</a>
+                </li>
+
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
+
+                <li>
+                    <a href="#tools">Skills</a>
+                </li>
+
+                <li>
+                    <a href="#resume">Resume</a>
+                </li>
+
+                <li>
+                    <a href="#contact" class="nav-resume">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =====================================================
+         HOME / HERO
+         ===================================================== -->
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="container">
+
+                <div class="hero-grid">
+
+
+                    <div class="reveal">
+
+                        <div class="eyebrow">
+                            BBA · IBA Karachi · Marketing
+                        </div>
+
+
+                        <h1>
+                            Still learning.<br>
+                            Already <em>creating.</em>
+                        </h1>
+
+
+                        <p class="hero-description">
+
+                            I’m a BBA student exploring digital marketing,
+                            advertising, content and creative strategy —
+                            turning ideas into work that people actually notice.
+
+                        </p>
+
+
+                        <div class="hero-actions">
+
+                            <a href="#projects"
+                               class="button button-dark">
+
+                                Explore my work →
+
+                            </a>
+
+
+                            <a href="#contact"
+                               class="button">
+
+                                Let’s connect
+
+                            </a>
+
+                        </div>
+
+
+                        <div class="scroll-note">
+
+                            <span class="scroll-line"></span>
+
+                            Scroll to explore
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="hero-side reveal">
+
+                        <div class="hero-side-number">
+                            03
+                        </div>
+
+                        <p class="hero-side-text">
+
+                            Year of BBA · IBA Karachi
+
+                            <br><br>
+
+                            Currently building experience across
+                            marketing, content, digital and creative work.
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             ABOUT
+             ================================================= -->
+
+        <section class="about" id="about">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        01 / ABOUT
+                    </div>
+
+                    <div>
+
+                        <h2 class="section-title">
+                            A business student with a <em>creative side.</em>
+                        </h2>
+
+                        <p class="section-intro">
+
+                            I’m studying BBA at IBA Karachi while exploring
+                            the parts of business that interest me most:
+                            marketing, digital media, advertising and
+                            creative strategy.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-grid reveal">
+
+
+                    <div>
+
+                        <p class="about-large">
+
+                            I like figuring out <span>why people notice things</span>,
+                            what makes content work, and how a brand can turn
+                            an ordinary idea into something people remember.
+
+                        </p>
+
+
+                        <p class="personal-note">
+
+                            Outside of marketing, fitness is a big part of
+                            my routine. It keeps me disciplined, consistent
+                            and very comfortable with doing the boring work
+                            repeatedly until it gets better.
+
+                        </p>
+
+                    </div>
+
+
+                    <div class="about-details">
+
+
+                        <div class="about-item">
+
+                            <small>Education</small>
+
+                            <strong>IBA Karachi</strong>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <small>Degree</small>
+
+                            <strong>BBA · 3rd Year</strong>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <small>Interested in</small>
+
+                            <strong>Marketing & Advertising</strong>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <small>Creative focus</small>
+
+                            <strong>Content & Strategy</strong>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <small>Digital</small>
+
+                            <strong>Social Media</strong>
+
+                        </div>
+
+
+                        <div class="about-item">
+
+                            <small>Outside work</small>
+
+                            <strong>Fitness</strong>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             EXPERIENCE
+             ================================================= -->
+
+        <section id="experience">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        02 / EXPERIENCE
+                    </div>
+
+                    <div>
+
+                        <h2 class="section-title">
+                            Things I’ve <em>worked on.</em>
+                        </h2>
+
+                        <p class="section-intro">
+
+                            A selection of experiences where I’ve worked
+                            across people, content, communication and
+                            creative projects.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="experience-list">
+
+
+                    <!-- =================================================
+                         EXPERIENCE 01
+
+                         EDIT THIS SECTION
+                         Copy this entire experience-item block
+                         when you want to add another experience.
+                         ================================================= -->
+
+                    <article class="experience-item reveal">
+
+
+                        <div class="experience-date">
+
+                            [DATES]
+
+                        </div>
+
+
+                        <div>
+
+                            <!-- EDIT THIS -->
+
+                            <div class="experience-company">
+
+                                [ORGANIZATION / COMPANY]
+
+                            </div>
+
+
+                            <!-- EDIT THIS -->
+
+                            <div class="experience-role">
+
+                                [YOUR ROLE]
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <!-- EDIT THIS -->
+
+                            <p class="experience-description">
+
+                                [Write 2–4 sentences explaining what you
+                                actually did here. Focus on your work,
+                                contribution and responsibilities.]
+
+                            </p>
+
+
+                            <!-- EDIT THIS: Add your skills -->
+
+                            <div class="skill-tags">
+
+                                <span class="tag">Content</span>
+
+                                <span class="tag">Marketing</span>
+
+                                <span class="tag">Communication</span>
+
+                                <span class="tag">Creative Work</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         EXPERIENCE 02
+                         ================================================= -->
+
+                    <article class="experience-item reveal">
+
+
+                        <div class="experience-date">
+
+                            [DATES]
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="experience-company">
+
+                                [ORGANIZATION / COMPANY]
+
+                            </div>
+
+
+                            <div class="experience-role">
+
+                                [YOUR ROLE]
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="experience-description">
+
+                                [Describe what you did, what you learned,
+                                and the value you contributed.]
+
+                            </p>
+
+
+                            <div class="skill-tags">
+
+                                <span class="tag">Skill</span>
+
+                                <span class="tag">Skill</span>
+
+                                <span class="tag">Skill</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+
+                    <!-- =================================================
+                         EXPERIENCE 03
+                         ================================================= -->
+
+                    <article class="experience-item reveal">
+
+
+                        <div class="experience-date">
+
+                            [DATES]
+
+                        </div>
+
+
+                        <div>
+
+                            <div class="experience-company">
+
+                                [ORGANIZATION / COMPANY]
+
+                            </div>
+
+
+                            <div class="experience-role">
+
+                                [YOUR ROLE]
+
+                            </div>
+
+                        </div>
+
+
+                        <div>
+
+                            <p class="experience-description">
+
+                                [Describe your responsibilities and work.]
+
+                            </p>
+
+
+                            <div class="skill-tags">
+
+                                <span class="tag">Skill</span>
+
+                                <span class="tag">Skill</span>
+
+                                <span class="tag">Skill</span>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             PROJECTS
+             ================================================= -->
+
+        <section class="projects" id="projects">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        03 / PROJECTS
+                    </div>
+
+                    <div>
+
+                        <h2 class="section-title">
+                            Work worth <em>looking at.</em>
+                        </h2>
+
+                        <p class="section-intro">
+
+                            Academic projects, mock campaigns and creative
+                            work that show how I think about brands,
+                            content and communication.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="projects-grid">
+
+
+                    <!-- =================================================
+                         PROJECT 01
+
+                         EDIT THIS
+                         ================================================= -->
+
+                    <a href="#"
+                       class="project-card reveal"
+                       onclick="return false;">
+
+
+                        <div>
+
+                            <div class="project-top">
+
+                                <span class="project-number">
+                                    01
+                                </span>
+
+                                <span class="project-type">
+                                    Mock Campaign
+                                </span>
+
+                            </div>
+
+
+                            <h3 class="project-title">
+
+                                [PROJECT TITLE]
+
+                            </h3>
+
+
+                            <p class="project-description">
+
+                                [Write a short description of the project.
+                                Example: A mock digital campaign created
+                                to explore how a lifestyle brand could
+                                strengthen its social media presence.]
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-bottom">
+
+
+                            <div class="project-tools">
+
+                                <span class="tag">Canva</span>
+
+                                <span class="tag">Strategy</span>
+
+                                <span class="tag">Content</span>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+
+                                ↗
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- =================================================
+                         PROJECT 02
+                         ================================================= -->
+
+                    <a href="#"
+                       class="project-card reveal"
+                       onclick="return false;">
+
+
+                        <div>
+
+                            <div class="project-top">
+
+                                <span class="project-number">
+                                    02
+                                </span>
+
+                                <span class="project-type">
+                                    Academic Project
+                                </span>
+
+                            </div>
+
+
+                            <h3 class="project-title">
+
+                                [PROJECT TITLE]
+
+                            </h3>
+
+
+                            <p class="project-description">
+
+                                [Explain the objective, your role and
+                                what you created.]
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-bottom">
+
+
+                            <div class="project-tools">
+
+                                <span class="tag">Figma</span>
+
+                                <span class="tag">Research</span>
+
+                                <span class="tag">Creative Strategy</span>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+
+                                ↗
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+
+                    <!-- =================================================
+                         PROJECT 03
+
+                         This larger card gives the portfolio
+                         an editorial / magazine feel.
+                         ================================================= -->
+
+                    <a href="#"
+                       class="project-card reveal"
+                       onclick="return false;">
+
+
+                        <div>
+
+                            <div class="project-top">
+
+                                <span class="project-number">
+                                    03
+                                </span>
+
+                                <span class="project-type">
+                                    Creative Project
+                                </span>
+
+                            </div>
+
+
+                            <h3 class="project-title">
+
+                                [PROJECT TITLE]
+
+                            </h3>
+
+
+                            <p class="project-description">
+
+                                [Add the objective, strategy, work,
+                                results and tools used.]
+
+                            </p>
+
+                        </div>
+
+
+                        <div class="project-bottom">
+
+
+                            <div class="project-tools">
+
+                                <span class="tag">Content</span>
+
+                                <span class="tag">Social Media</span>
+
+                                <span class="tag">CapCut</span>
+
+                            </div>
+
+
+                            <div class="project-arrow">
+
+                                ↗
+
+                            </div>
+
+                        </div>
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             TOOLS / SKILLS
+             ================================================= -->
+
+        <section id="tools">
+
+            <div class="container">
+
+
+                <div class="section-header reveal">
+
+                    <div class="section-number">
+                        04 / TOOLS
+                    </div>
+
+                    <div>
+
+                        <h2 class="section-title">
+                            Tools I <em>work with.</em>
+                        </h2>
+
+                        <p class="section-intro">
+
+                            A growing toolkit for creating, designing,
+                            editing and understanding digital work.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="tools-grid">
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">✦</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                Canva
+                            </div>
+
+                            <div class="tool-description">
+                                Design & social content
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">◈</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                Figma
+                            </div>
+
+                            <div class="tool-description">
+                                Visual design & layouts
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">▶</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                CapCut
+                            </div>
+
+                            <div class="tool-description">
+                                Short-form video editing
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">↗</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                Google Analytics
+                            </div>
+
+                            <div class="tool-description">
+                                Digital analytics
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">▦</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                Microsoft Office
+                            </div>
+
+                            <div class="tool-description">
+                                Documents & presentations
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">G</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                Google Workspace
+                            </div>
+
+                            <div class="tool-description">
+                                Collaboration & productivity
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">+</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                Content
+                            </div>
+
+                            <div class="tool-description">
+                                Writing & storytelling
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="tool reveal">
+
+                        <div class="tool-icon">◎</div>
+
+                        <div>
+
+                            <div class="tool-name">
+                                Strategy
+                            </div>
+
+                            <div class="tool-description">
+                                Ideas & creative thinking
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             RESUME
+             ================================================= -->
+
+        <section class="resume" id="resume">
+
+            <div class="container">
+
+
+                <div class="resume-grid reveal">
+
+
+                    <div>
+
+                        <div class="section-number">
+                            05 / RESUME
+                        </div>
+
+
+                        <h2 class="resume-title">
+
+                            More than a <em>one-pager.</em>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div>
+
+                        <p class="resume-text">
+
+                            Want the complete picture?
+                            My CV covers my education, experience,
+                            projects and skills in one place.
+
+                        </p>
+
+
+                        <!--
+                        IMPORTANT:
+
+                        Put your actual CV PDF in the same folder
+                        as this index.html file.
+
+                        Name the PDF:
+
+                        resume.pdf
+
+                        Then this button will automatically open it.
+                        -->
+
+                        <a href="resume.pdf"
+                           target="_blank"
+                           class="resume-button">
+
+                            View my resume ↗
+
+                        </a>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             CONTACT
+             ================================================= -->
+
+        <section class="contact" id="contact">
+
+            <div class="container">
+
+
+                <div class="contact-grid reveal">
+
+
+                    <div>
+
+                        <div class="section-number">
+                            06 / CONTACT
+                        </div>
+
+
+                        <h2 class="contact-heading">
+
+                            Let's make<br>
+                            something <em>good.</em>
+
+                        </h2>
+
+                    </div>
+
+
+                    <div class="contact-links">
+
+
+                        <!-- EDIT THIS: Replace email address -->
+
+                        <a href="mailto:[MY EMAIL]"
+                           class="contact-link">
+
+                            <span>
+
+                                <span class="contact-label">
+                                    Email
+                                </span>
+
+                                <br>
+
+                                [MY EMAIL]
+
+                            </span>
+
+                            <span>↗</span>
+
+                        </a>
+
+
+                        <!-- EDIT THIS: Replace phone number -->
+
+                        <a href="tel:[MY PHONE]"
+                           class="contact-link">
+
+                            <span>
+
+                                <span class="contact-label">
+                                    Phone
+                                </span>
+
+                                <br>
+
+                                [MY PHONE]
+
+                            </span>
+
+                            <span>↗</span>
+
+                        </a>
+
+
+                        <!-- EDIT THIS: Replace LinkedIn URL -->
+
+                        <a href="[MY LINKEDIN]"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="contact-link">
+
+                            <span>
+
+                                <span class="contact-label">
+                                    LinkedIn
+                                </span>
+
+                                <br>
+
+                                Let's connect
+
+                            </span>
+
+                            <span>↗</span>
+
+                        </a>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer>
+
+        <div class="container footer-inner">
+
+            <span>
+                © 2026 [MY NAME]
+            </span>
+
+            <span>
+                Built with curiosity.
+            </span>
+
+        </div>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+         This controls the mobile menu and animations.
+         ===================================================== -->
+
+    <script>
+
+
+        /* ==================================================
+           MOBILE MENU
+           ================================================== */
+
+        const menuButton = document.getElementById("menuButton");
+
+        const navLinks = document.getElementById("navLinks");
+
+
+        menuButton.addEventListener("click", function () {
+
+            navLinks.classList.toggle("active");
+
+
+            const isOpen =
+                navLinks.classList.contains("active");
+
+
+            menuButton.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+        });
+
+
+        /* Close mobile menu after clicking a link */
+
+        document.querySelectorAll(".nav-links a")
+            .forEach(function (link) {
+
+                link.addEventListener("click", function () {
+
+                    navLinks.classList.remove("active");
+
+                    menuButton.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                });
+
+            });
+
+
+
+        /* ==================================================
+           SCROLL ANIMATIONS
+           ================================================== */
+
+        const revealElements =
+            document.querySelectorAll(".reveal");
+
+
+        const observer =
+            new IntersectionObserver(
+
+                function (entries) {
+
+                    entries.forEach(function (entry) {
+
+                        if (entry.isIntersecting) {
+
+                            entry.target.classList.add("visible");
+
+                            observer.unobserve(entry.target);
+
+                        }
+
+                    });
+
+                },
+
+                {
+                    threshold: 0.12
+                }
+
+            );
+
+
+        revealElements.forEach(function (element) {
+
+            observer.observe(element);
+
+        });
+
+
+    </script>
+
+
+</body>
+</html>
